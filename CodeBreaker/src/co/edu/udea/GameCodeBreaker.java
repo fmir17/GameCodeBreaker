@@ -16,7 +16,7 @@ public class GameCodeBreaker {
 		
 		while(i<4)
 		{
-			//Numeros que se encuentran bien ubicados.
+			//Numeros que se encuentran bien ubicados
 			if(valor.charAt(i)==numeroEscondido.charAt(i)){
 				resultado ="X"+resultado;
 				bnUbicado=true;
