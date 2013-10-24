@@ -13,7 +13,6 @@ public class GameCodeBreakerTest {
 		GameCodeBreaker game = new GameCodeBreaker();
 		String valor = game.validar("1357");
 		assertEquals("XXXX", valor);
-		
 	}
 	
 	@Test
@@ -21,7 +20,6 @@ public class GameCodeBreakerTest {
 		GameCodeBreaker game = new GameCodeBreaker();
 		String valor = game.validar("1468");
 		assertEquals("X", valor);
-		
 	}
 	
 	@Test
@@ -29,7 +27,6 @@ public class GameCodeBreakerTest {
 		GameCodeBreaker game = new GameCodeBreaker();
 		String valor = game.validar("1857");
 		assertEquals("XXX", valor);
-		
 	}
 	
 	@Test
@@ -37,14 +34,13 @@ public class GameCodeBreakerTest {
 		GameCodeBreaker game = new GameCodeBreaker();
 		String valor = game.validar("9841");
 		assertEquals("_", valor);
-		
 	}
+	
 	@Test
 	public void testDosCoincideUnoDesubicado(){
 		GameCodeBreaker game = new GameCodeBreaker();
 		String valor = game.validar("9351");
 		assertEquals("XX_", valor);
-		
 	}
 	
 	@Test
@@ -52,8 +48,6 @@ public class GameCodeBreakerTest {
 		GameCodeBreaker game = new GameCodeBreaker();
 		String valor = game.validar("7351");
 		assertEquals("XX__", valor);
-		
-		
 	}
 	
 	@Test
@@ -61,8 +55,6 @@ public class GameCodeBreakerTest {
 		GameCodeBreaker game = new GameCodeBreaker();
 		String valor = game.validar("7135");
 		assertEquals("____", valor);
-		
-		
 	}
 	
 	@Test
@@ -70,8 +62,14 @@ public class GameCodeBreakerTest {
 		GameCodeBreaker game = new GameCodeBreaker();
 		String valor = game.validar("2468");
 		assertEquals("", valor);
-		
-		
+	}
+	
+	
+	@Test
+	public void testUnoCoincideTresDescubicado(){
+		GameCodeBreaker game = new GameCodeBreaker();
+		String valor = game.validar("3517");
+		assertEquals("X___", valor);
 	}
 	
 	

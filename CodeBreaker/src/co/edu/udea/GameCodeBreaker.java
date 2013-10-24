@@ -11,33 +11,32 @@ public class GameCodeBreaker {
 		int i = 0;
 		int j= 0;
 		
-		//Buscar Numeros que estan en la posicion exacta.
-		while(i<4){
-			if(valor.charAt(i)==numeroEscondido.charAt(i)){
-				resultado +="X";
-			}
-	
-			
-			i++;
-		}
-		//Refactor final
-		//Buscar Numeros que se encuentran pero no estan ubicados.
-		i=0;
+		//Variable q indica poner X
+		boolean bnUbicado =false;
+		
 		while(i<4)
 		{
+			//Numeros que se encuentran bien ubicados.
+			if(valor.charAt(i)==numeroEscondido.charAt(i)){
+				resultado ="X"+resultado;
+				bnUbicado=true;
+			}
+	
 			j=0;
-			while(j<4)
+			//Si no se puso X se busca para poner _
+			while(j<4 & bnUbicado==false)
 			{
 				
 				if(i!=j){
 					
 					if(valor.charAt(i)==numeroEscondido.charAt(j))
 					{
-						resultado += "_";
+						resultado+= "_";
 					}
 				}
 					j++;
 			}
+			bnUbicado=false;
 			i++;
 		}
 
