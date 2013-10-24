@@ -32,6 +32,7 @@ public class GameCodeBreaker {
 					if(valor.charAt(i)==numeroEscondido.charAt(j))
 					{
 						resultado+= "_";
+						bnUbicado=true;
 					}
 				}
 					j++;
