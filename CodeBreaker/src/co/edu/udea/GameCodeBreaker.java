@@ -11,7 +11,7 @@ public class GameCodeBreaker {
 		int i = 0;
 		int j= 0;
 		
-		//Buscar Numeros que estan en la posicion exacta
+		//Buscar Numeros que estan en la posicion exacta.
 		while(i<4){
 			if(valor.charAt(i)==numeroEscondido.charAt(i)){
 				resultado +="X";
